@@ -18,7 +18,7 @@ class ClassroomFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->unique()->randomElement(['11 PPLG 1', '11 PPLG 2', '11 PPLG 3']),
+            'name' => fake()->randomElement(['11 PPLG 1', '11 PPLG 2', '11 PPLG 3', '10 DKV 1', '10 ANIMASI 1']),
             'major' => fake()->randomElement(['PPLG', 'DKV', 'ANIMASI']),
         ];
     }

@@ -9,6 +9,7 @@
                     <th scope="col" class="px-6 py-3">ID</th>
                     <th scope="col" class="px-6 py-3">Name</th>
                     <th scope="col" class="px-6 py-3">Major</th>
+                    <th scope="col" class="px-6 py-3">Student</th>
                 </tr>
             </thead>
             <tbody>
@@ -17,6 +18,11 @@
                         <td class="px-6 py-4">{{ $classroom->id }}</td>
                         <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">{{ $classroom->name }}</td>
                         <td class="px-6 py-4">{{ $classroom->major }}</td>
+                        <td class="px-6 py-4 text-gray-300">
+                            @foreach ( $classroom->students as $student)
+                            {{ $student->name }} <br>
+                            @endforeach
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

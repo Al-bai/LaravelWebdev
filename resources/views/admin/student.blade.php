@@ -88,7 +88,6 @@
                             <td class="px-4 py-3 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ $loop->iteration }}
                             </td>
-                            <!-- Diubah menggunakan object accessor -> -->
                             <td class="px-4 py-3 font-semibold text-gray-900 dark:text-white">
                                 {{ $student->nis }}
                             </td>
@@ -96,13 +95,12 @@
                                 {{ $student->name }}
                             </td>
                             <td class="px-4 py-3">
-                                {{ $student->classroom }}
+                                {{ $student->classroom->name}}
                             </td>
                             <td class="px-4 py-3">
-                                {{ $student->address }} <!-- Tambahan data alamat -->
+                                {{ $student->address }}
                             </td>
                             <td class="px-4 py-3 text-center">
-                                <!-- Penyesuaian pengecekan status (aktif/tidak) -->
                                 @if(isset($student->status) && $student->status == 'Inactive')
                                     <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
                                         Inactive
