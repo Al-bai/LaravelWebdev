@@ -9,6 +9,7 @@
                 <tr>
                     <th scope="col" class="px-6 py-3">ID</th>
                     <th scope="col" class="px-6 py-3">Name</th>
+                    <th scope="col" class="px-6 py-3">Teacher</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,6 +17,7 @@
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <td class="px-6 py-4">{{ $subject->id }}</td>
                         <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">{{ $subject->name }}</td>
+                        <td class="px-6 py-4">{{ $subject->teacher->name ?? 'Belum ada guru' }}</td>
                     </tr>
                 @endforeach
             </tbody>

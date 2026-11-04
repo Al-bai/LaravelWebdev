@@ -31,8 +31,8 @@ class SubjectFactory extends Factory
                 'Pendidikan Pancasila',
                 'Penjasorkes',
                 'Pemrograman Berorientasi Objek',
-                'Sistem Komputer'
-            ])
+                'Sistem Komputer',
+            ]),
 
         ];
     }

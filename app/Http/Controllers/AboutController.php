@@ -11,18 +11,18 @@ class AboutController extends Controller
      */
     public function index()
     {
-       return view('admin.about',[
-         'title' => 'About',
-         'content' => [
-                'nama'   => 'Albay Haqy Alfarizky',
-                'hobi'   => 'Marathon Anime',
+        return view('admin.about', [
+            'title' => 'About',
+            'content' => [
+                'nama' => 'Albay Haqy Alfarizky',
+                'hobi' => 'Marathon Anime',
                 'github' => [
                     'username' => 'Al - bai',
-                    'url'      => 'https://github.com/Al-bai',
+                    'url' => 'https://github.com/Al-bai',
                 ],
-            ]
+            ],
 
-       ]);
+        ]);
     }
 
     /**

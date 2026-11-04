@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('nis');
             // $table->string('classroom');
             $table->foreignId('classroom_id')->constrained(
-                table: 'classrooms', indexName:'students_classroom_id'
+                table: 'classrooms', indexName: 'students_classroom_id'
             );
             $table->text('address');
             $table->string('status')->default('Active');

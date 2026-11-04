@@ -2,19 +2,19 @@
 
 namespace App\Models;
 
+use Database\Factories\StudentFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-
 class Student extends Model
 {
-    /** @use HasFactory<\Database\Factories\StudentFactory> */
+    /** @use HasFactory<StudentFactory> */
     use HasFactory;
 
     protected $with = ['classroom'];
 
     protected $fillable = [
-        'name','nis','classroom_id','address',
+        'name', 'nis', 'classroom_id', 'address',
     ];
 
     public function classroom()

@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Student;
 use App\Models\Classroom;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Student;
 use Illuminate\Database\Seeder;
 
 class StudentSeeder extends Seeder
@@ -27,11 +26,9 @@ class StudentSeeder extends Seeder
             ['nis' => 204, 'name' => 'Queen Lacrimosa', 'classroom' => 'X DKV 1', 'address' => 'Pati', 'status' => 'Active'],
         ];
 
-
         foreach ($rawStudents as $student) {
-            
-            $jurusan = explode(' ', $student['classroom'])[1] ?? 'Umum';
 
+            $jurusan = explode(' ', $student['classroom'])[1] ?? 'Umum';
 
             $classroom = Classroom::firstOrCreate(
                 ['name' => $student['classroom']],
