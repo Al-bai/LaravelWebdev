@@ -10,6 +10,6 @@ class TeacherController extends Controller
     {
         $teachers = Teacher::all();
 
-        return view('admin.teacher', compact('teachers'));
+        return view('admin.teacher.index', compact('teachers'));
     }
 }

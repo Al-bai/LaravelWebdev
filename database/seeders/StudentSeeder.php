@@ -24,7 +24,11 @@ class StudentSeeder extends Seeder
             ['nis' => 202, 'name' => 'Yung Lex', 'classroom' => 'X DKV 1', 'address' => 'Semarang', 'status' => 'Inactive'],
             ['nis' => 203, 'name' => 'Rae Rayhan', 'classroom' => 'X DKV 1', 'address' => 'Kudus', 'status' => 'Active'],
             ['nis' => 204, 'name' => 'Queen Lacrimosa', 'classroom' => 'X DKV 1', 'address' => 'Pati', 'status' => 'Active'],
+            ['nis' => 105, 'name' => 'Siti Aminah', 'classroom' => 'X RPL 1', 'address' => 'Kudus', 'status' => 'Active'],
         ];
+
+        $allowedClassrooms = ['X RPL 2', 'X Anim 1', 'X Anim 3', 'X DKV 1', 'X RPL 1'];
+        $rawStudents = array_filter($rawStudents, fn ($s) => in_array($s['classroom'], $allowedClassrooms));
 
         foreach ($rawStudents as $student) {
 

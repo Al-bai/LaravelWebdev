@@ -10,6 +10,6 @@ class SubjectController extends Controller
     {
         $subjects = Subject::all();
 
-        return view('admin.subject', compact('subjects'));
+        return view('admin.subject.index', compact('subjects'));
     }
 }
